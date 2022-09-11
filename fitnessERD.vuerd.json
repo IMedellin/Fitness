@@ -1,0 +1,320 @@
+{
+  "canvas": {
+    "version": "2.2.11",
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": -15,
+    "scrollLeft": -14,
+    "zoomLevel": 1,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "PostgreSQL",
+    "databaseName": "fitness_tracker",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "highlightTheme": "VS2015",
+    "bracketType": "none",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "relationshipOptimization": false,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    },
+    "pluginSerializationMap": {}
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "users",
+        "comment": "User Info",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "INT SERIAL",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.8662109375,
+              "widthDefault": 60
+            },
+            "id": "57ce34c9-3665-4cad-a093-b6ed406cbbd8"
+          },
+          {
+            "name": "username",
+            "comment": "",
+            "dataType": "VARCHAR(50)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63.78173828125,
+              "widthComment": 60,
+              "widthDataType": 82.85009765625,
+              "widthDefault": 60
+            },
+            "id": "48cb1bc6-61b2-4921-b86c-68522ca843e2"
+          },
+          {
+            "name": "fname",
+            "comment": "",
+            "dataType": "VARCHAR(75)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 82.85009765625,
+              "widthDefault": 60
+            },
+            "id": "11dd332d-1e0e-412f-af26-de973e476a1e"
+          },
+          {
+            "name": "lname",
+            "comment": "",
+            "dataType": "VARCHAR(75)",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 82.85009765625,
+              "widthDefault": 60
+            },
+            "id": "1c55e9db-fe16-46be-afdf-f0366a9d2c88"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 158,
+          "top": 117,
+          "zIndex": 197,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "visible": true,
+        "id": "76ef9aed-1a15-4324-a33c-31a67fc5c326"
+      },
+      {
+        "name": "BMI",
+        "comment": "users basic body measurements",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "INT SERIAL",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 68.8662109375,
+              "widthDefault": 60
+            },
+            "id": "54ceeff3-f55f-4310-b070-b46526ca2035"
+          },
+          {
+            "name": "user_id",
+            "comment": "foreign key to relate to users table",
+            "dataType": "INT SERIAL",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 120,
+              "widthDataType": 68.8662109375,
+              "widthDefault": 60
+            },
+            "id": "e31ce0b9-40b0-4a3f-b8dc-e10615b69618"
+          },
+          {
+            "name": "age",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "923d0822-37ed-4330-8f94-f1b44b05c171"
+          },
+          {
+            "name": "height(in)",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60.626953125,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "70d65bf8-9b8b-4f83-b375-e47b0045b0a5"
+          },
+          {
+            "name": "weight(lbs)",
+            "comment": "",
+            "dataType": "INT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 68.99951171875,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "17c2e49a-a485-4145-b3a4-2204c2e216ef"
+          }
+        ],
+        "ui": {
+          "active": true,
+          "left": 763,
+          "top": 111,
+          "zIndex": 223,
+          "widthName": 60,
+          "widthComment": 120
+        },
+        "visible": true,
+        "id": "16bc192a-f9d5-45bb-b413-4b62f9fc9849"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "relationshipType": "OneOnly",
+        "startRelationshipType": "Dash",
+        "start": {
+          "tableId": "76ef9aed-1a15-4324-a33c-31a67fc5c326",
+          "columnIds": [
+            "57ce34c9-3665-4cad-a093-b6ed406cbbd8"
+          ],
+          "x": 531.6318359375,
+          "y": 192.5,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "16bc192a-f9d5-45bb-b413-4b62f9fc9849",
+          "columnIds": [
+            "e31ce0b9-40b0-4a3f-b8dc-e10615b69618"
+          ],
+          "x": 763,
+          "y": 196.75,
+          "direction": "left"
+        },
+        "constraintName": "fk_users_to_bmi",
+        "visible": true,
+        "id": "6b51b4ac-7fbc-4c63-95a3-30753150b342"
+      }
+    ]
+  }
+}
