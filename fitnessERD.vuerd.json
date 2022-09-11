@@ -101,7 +101,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -124,7 +124,7 @@
               "autoIncrement": false,
               "primaryKey": false,
               "unique": false,
-              "notNull": false
+              "notNull": true
             },
             "ui": {
               "active": false,
@@ -140,10 +140,10 @@
           }
         ],
         "ui": {
-          "active": false,
+          "active": true,
           "left": 158,
           "top": 117,
-          "zIndex": 197,
+          "zIndex": 227,
           "widthName": 60,
           "widthComment": 60
         },
@@ -271,7 +271,7 @@
           }
         ],
         "ui": {
-          "active": true,
+          "active": false,
           "left": 763,
           "top": 111,
           "zIndex": 223,
