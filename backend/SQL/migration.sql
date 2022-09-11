@@ -1,2 +1,17 @@
-DROP DATABASE IF EXISTS fitness_tracker;
-CREATE DATABASE fitness_tracker
+DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS user_bmi;
+CREATE TABLE users(
+  userID SERIAL,
+  username VARCHAR(50) NOT NULL,
+  fname VARCHAR(75) NOT NULL,
+  lname VARCHAR(75) NOT NULL,
+  PRIMARY KEY(userID)
+);
+CREATE TABLE user_bmi(
+  bmiID SERIAL PRIMARY KEY,
+  userID INTEGER,
+  age INTEGER,
+  height INTEGER,
+  weight NUMERIC,
+  CONSTRAINT fk_user FOREIGN KEY(userID) REFERENCES users(userID)
+)
