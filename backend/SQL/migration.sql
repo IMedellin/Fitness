@@ -1,17 +1,16 @@
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS user_bmi;
+DROP TABLE IF EXISTS users_bmi;
 CREATE TABLE users(
-  userID SERIAL,
-  username VARCHAR(50) NOT NULL,
-  fname VARCHAR(75) NOT NULL,
-  lname VARCHAR(75) NOT NULL,
-  PRIMARY KEY(userID)
+  userid SERIAL,
+  username VARCHAR(50),
+  fullName VARCHAR(225),
+  PRIMARY KEY(userid)
 );
-CREATE TABLE user_bmi(
-  bmiID SERIAL PRIMARY KEY,
-  userID INTEGER,
-  age INTEGER,
-  height INTEGER,
+CREATE TABLE users_bmi(
+  bmiid SERIAL,
+  userid INT REFERENCES users,
+  age INT,
   weight NUMERIC,
-  CONSTRAINT fk_user FOREIGN KEY(userID) REFERENCES users(userID)
-)
+  height INT,
+  PRIMARY KEY(bmiid)
+);

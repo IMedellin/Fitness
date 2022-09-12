@@ -10,18 +10,25 @@ app.use(express.static('public'))
 
 //Get all users
 app.get('/users', async (req, res) => {
-  const getAll = await pool.query("SELECT * FROM users")
+  const getAll = await pool.query("SELECT username, age, weight, height FROM users JOIN users_bmi ON users.userid = users_bmi.userid")
     .then(data => {
-      data.rows.push('Get works with promise')
-      res.send(data.rows)
+      res.json(data.rows)
+    })
+    .catch(error => {
+      res.setHeader(400)
+      console.error(error)
     })
 })
 
 //Get one user general information
-app.get('/users/username', async (req, res) => {
-  const getOne = await pool.query("SELECT * FROM users WHERE ")
+app.get('/users/:username', async (req, res) => {
+  const { username } = req.params;
+  const getOne = await pool.query("SELECT username, fullname, age, weight, height FROM users JOIN users_bmi ON users.userid = users_bmi.userid WHERE username = $1", [username])
+    .then(data => {
+      res.send(data.rows)
+    })
+    .catch(error => console.error(error))
 })
-
 
 
 
